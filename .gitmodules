@@ -1,0 +1,3 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:ezynda3/ezynda3.github.io.git
