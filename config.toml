@@ -2,7 +2,7 @@ baseurl = "http://edzynda.com/"
 languageCode = "en-us"
 title = "Ed Zynda - Coder, Hacker, Superhero"
 # Define how many pages appear per site
-paginate = 10
+paginate = 5
 # Enable comments powered by Disqus by entering your disqus shortname
 disqusShortname = "edzynda"
 
@@ -12,10 +12,10 @@ disqusShortname = "edzynda"
     location = "Earth"
     # All paths are relative to the baseurl. Put your files
     # somewhere in the static folder.
-    avatar = "img/profile-image.png"
+    avatar = "http://www.gravatar.com/avatar/6f0ca2846bbe006ad4bc12a583387c6a.png?size=200"
     header_background = "img/desk.jpg"
     header_title = "Customizable header title"
-    copyright = "Powered by [Hugo](http://gohugo.io)."
+    copyright = "© 2016 Ed Zynda."
 
     # Enable gogle analytics by entering your tracking code
     google_analytics = ""

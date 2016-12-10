@@ -4,7 +4,7 @@
         <div class="col l6 s12">
           <div class="row valign-wrapper">
             <div class="col s4">
-              <img src="http://www.gravatar.com/avatar/6f0ca2846bbe006ad4bc12a583387c6a.png?size=200" class="circle responsive-img">
+              <img src="{{ .Site.Params.avatar }}" class="circle responsive-img">
             </div>
             <div class="col s8">
               <h5 class="white-text">About Me</h5>
@@ -26,7 +26,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2016 {{ .Site.Params.site_author }}
+      {{ .Site.Params.copyright }}
       </div>
     </div>
   </footer>
