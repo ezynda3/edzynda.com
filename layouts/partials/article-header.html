@@ -2,9 +2,9 @@
   {{ with .Params.thumbnail }}
       <img src="{{ . }}" class="responsive-img">
   {{ end }}
-  <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+  <h3><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h3>
 {{ else }}
-  <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+  <h3><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h3>
 {{ end }}
   {{ .Site.Data.l10n.article.posted_on }}
   <time datetime="{{ .Date.Format "Jan 01, 2006" }}">{{ .Date.Format "January 01, 2006" }}</time>

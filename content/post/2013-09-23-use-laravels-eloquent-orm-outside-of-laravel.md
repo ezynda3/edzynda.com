@@ -14,15 +14,15 @@ tags:
 - laravel
 - ORM
 - PHP
-title: Use Laravel&#8217;s Eloquent ORM Outside Of Laravel
+title: Use Laravel's Eloquent ORM Outside Of Laravel
 url: /use-laravels-eloquent-orm-outside-of-laravel/
 ---
 
-Working with databases in Laravel is ridiculously easy thanks to Eloquent. Eloquent allows you to map database tables as simple model objects that include various methods for retrieving and updating the database. While working on other people&#8217;s code, however, I&#8217;m usually not lucky enough to be working with something as enjoyable as Laravel. Thankfully Laravel is written in such a way that some of it&#8217;s key components can be used as stand-alone modules.
+Working with databases in Laravel is ridiculously easy thanks to Eloquent. Eloquent allows you to map database tables as simple model objects that include various methods for retrieving and updating the database. While working on other people's code, however, I'm usually not lucky enough to be working with something as enjoyable as Laravel. Thankfully Laravel is written in such a way that some of it's key components can be used as stand-alone modules.
 
-Using Laravel&#8217;s database magic in your own projects is pretty simple. First you need to make sure you have all the required components included in your project. Currently Laravel 4 is the latest version and it&#8217;s codename is &#8220;Illuminate&#8221;. It&#8217;s database component is therefore called &#8220;Illuminate\Database&#8221;. The easiest way to grab &#8220;Illuminate\Database&#8221; and it&#8217;s dependencies is to use <a title="Composer" href="http://getcomposer.org/" target="_blank">Composer</a>.
+Using Laravel's database magic in your own projects is pretty simple. First you need to make sure you have all the required components included in your project. Currently Laravel 4 is the latest version and it's codename is "Illuminate". It's database component is therefore called "Illuminate\Database". The easiest way to grab "Illuminate\Database" and it's dependencies is to use <a title="Composer" href="http://getcomposer.org/" target="_blank">Composer</a>.
 
-Make sure there is file called &#8216;composer.json&#8217; in your project that contains the following:  
+Make sure there is file called 'composer.json' in your project that contains the following:  
 
 ```json  
 {
@@ -37,7 +37,7 @@ Now run:
 ```bash  
 $ composer install  
 ```  
-In order to start using Eloquent let&#8217;s create a file called database.php to include in our various project files.  
+In order to start using Eloquent let's create a file called database.php to include in our various project files.  
 
 ```php  
 <?php  

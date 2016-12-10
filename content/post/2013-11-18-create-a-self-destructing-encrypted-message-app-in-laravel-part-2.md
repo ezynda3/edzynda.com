@@ -23,8 +23,8 @@ tags:
 title: Create A Self-destructing, Encrypted Message App In Laravel Part 2
 url: /create-a-self-destructing-encrypted-message-app-in-laravel-part-2/
 ---
-
 The first thing we'll need to do is create a default layout. This is the layout that the rest of our views will extend. Let's save it as 'app/views/layouts/default.blade.php'.
+<!--more-->
 
 ```html
 <!DOCTYPE html>
