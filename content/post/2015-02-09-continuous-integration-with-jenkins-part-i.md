@@ -62,19 +62,19 @@ If you have Jenkins installed correctly you should be able to reach the dashboar
 
 Once there you should see a screen like this.
 
-![](/images/jenkins-1-1.png)
+![](/media/jenkins-1-1.png)
 
 Click on "Create new jobs". We're going to use an existing open source project called Flysystem for our build test so we'll just call our build "Flysystem" and we're going to create a "Freestyle" project. Click "Ok" to continue.
 
-![](/images/jenkins-1-2.png)
+![](/media/jenkins-1-2.png)
 
 We can give our project a description if we like.
 
-![](/images/jenkins-1-3.png)
+![](/media/jenkins-1-3.png)
 
 Now down in the "Source Code Management" section we'll select "Git" and set the repository to https://github.com/thephpleague/flysystem. You can safely leave everything else as default.
 
-![](/images/jenkins-1-4.png)
+![](/media/jenkins-1-4.png)
 
 Under the "Build" section we set up the different steps for building and testing our applications. Click on "Add build step" and select "Execute shell". This is a quick and dirty way to run various build commands without having to create a complex XML build script for use with Ant or Maven. Add the following commands in the textbox.
 
@@ -83,22 +83,22 @@ Under the "Build" section we set up the different steps for building and testing
 bin/phpspec run -f html > report.html
 ```
 
-![](/images/jenkins-1-5.png)
+![](/media/jenkins-1-5.png)
 
 The great thing about Jenkins is that with the right plugins you can create all kinds of useful reports for every build of your application. In our build step we're running phpspec for tests and setting the output format as HTML and saving it to a file. Jenkins can take that HTML and publish it for viewing later.
 .
 Under "Post-build Actions" click on "Add post-build action" and select "Publish HTML Reports". Fill out the textboxes like so.
 
-![](/images/jenkins-1-6.png)
+![](/media/jenkins-1-6.png)
 
 Hit save and that's it. On the left side menu click "Build Now". You should a little blinking dot appear under "Build History". Click on it and then click on "Console Output". You should see a bunch of text scrolling past as the build runs. It should look something like this.
 
-![](/images/jenkins-1-7.png)
+![](/media/jenkins-1-7.png)
 
 It might take a few minutes if this is the first time running the build as composer is downloading dependencies from scratch.
 
 Now click "Back to Project" and then click "PHPSpec Report". This is the nice HTML report we had published. This wil list out all the tests that were run. Tests that passed will be green while any that have failed will be red and usually give a stack trace with details on why it failed.
 
-![](/images/jenkins-1-8.png)
+![](/media/jenkins-1-8.png)
 
 That's basically all you need to get a simple build running on Jenkins. Of course there is a lot more you can do but that will be covered in a later post.

@@ -182,11 +182,11 @@ class SearchCharacterCommand extends Command
 }
 ```
 
-All commands extend 'Symfony\Component\Console\Command\Command'. The 'configure()' method is used to tell Symfony how to invoke the command. In this case it's 
+All commands extend 'Symfony\Component\Console\Command\Command'. The 'configure()' method is used to tell Symfony how to invoke the command. In this case it's
 
 ```bash
 $ ./marvel search:character <name>
-``` 
+```
 
 We can create other commands if we want to but we'll stick with one for now. We also define arguments and options to accept. In this case the 'name' argument is required but the 'titles' option is not. So to run a character search you would need to do something like.
 
@@ -202,10 +202,8 @@ $ ./marvel search:character --titles Thor
 
 The output looks something like this.
 
-![Output](/images/marvel-search-output.png)
+![Output](/media/marvel-search-output.png)
 
 The 'execute()' method tells Symfony what logic to run when our command is invoked. I won't get too much into how the API client works but you can check out some of the examples in the library's [Github repo](https://github.com/caseysoftware/marvel-php).
 
 This should give you a taste of what kind of cool command line tools you can create. For more information and to learn what else the Symfony\Console component can do, check out the [documentation](http://symfony.com/doc/current/components/console/introduction.html).
-
-
