@@ -1,11 +1,11 @@
 <div class="section white container">
-  <div class="row">
-    <div class="col s8">
-      {{ range .Paginator.Pages }}
-          {{ .Render "summary" }}
-      {{ end }}
-      {{ partial "pagination" . }}
+    <div class="row">
+        <div class="col s12 m8">
+            {{ range .Paginator.Pages }}
+            {{ .Render "summary" }}
+            {{ end }}
+            {{ partial "pagination" . }}
+        </div>
+        {{ partial "sidebar" . }}
     </div>
-  {{ partial "sidebar" . }}  
-  </div>
 </div>

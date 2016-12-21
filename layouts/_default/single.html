@@ -1,16 +1,14 @@
 {{ partial "header" . }}
-
 <div class="section white container">
-  <div class="row">
-    <div class="col s8">
-      {{ partial "article-header" . }}
-      {{ .Content}}
-      {{ partial "article-share" . }}
-      <h3>{{ .Site.Data.l10n.comments.comments }}</h3>
-      {{ template "_internal/disqus.html" . }}
+    <div class="row">
+        <div class="col s8">
+            {{ partial "article-header" . }}
+            {{ .Content}}
+            {{ partial "article-share" . }}
+            <h3>{{ .Site.Data.l10n.comments.comments }}</h3>
+            {{ template "_internal/disqus.html" . }}
+        </div>
+        {{ partial "sidebar" . }}
     </div>
-    {{ partial "sidebar" . }}
-  </div>
 </div>
-
 {{ partial "footer" . }}

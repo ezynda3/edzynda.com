@@ -1,14 +1,14 @@
 {{ partial "header" . }}
-
 <div class="section white container">
-  <div class="row">
-    <div class="col s8">
-        {{ $paginator := .Paginate .Data.Pages }}
-        {{ range $paginator.Pages }}
+    <div class="row">
+        <div class="col s8">
+            {{ $paginator := .Paginate .Data.Pages }}
+            {{ range $paginator.Pages }}
             {{ .Render "summary" }}
-        {{ end }}
-        {{ partial "pagination" . }}
+            {{ end }}
+            {{ partial "pagination" . }}
+        </div>
+        {{ partial "sidebar" . }}
     </div>
-    {{ partial "sidebar" . }}
 </div>
 {{ partial "footer" . }}
