@@ -6,6 +6,7 @@ tags:
 - Docker
 - Containers
 - Websockets
+image: "/images/go-docker-header.png"
 ---
 
 Recently, I wrote an article on how to [create a simple chat server using WebSockets and Go](https://scotch.io/bar-talk/build-a-realtime-chat-server-with-go-and-websockets). I made the [source code](https://github.com/scotch-io/go-realtime-chat) available and it's pretty simple to get the example up and running if you have a basic familiarization with Go. I wanted to see if I could make it easier for people to try out though. For this, I looked to the very popular [Docker](https://docker.io) project.

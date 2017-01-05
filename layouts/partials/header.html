@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>{{ .Site.Title }}</title>
 
+  {{ partial "meta" . }}
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -45,7 +47,15 @@
     <br>
     <br>
     <br>
+    {{ if not .IsPage }}
     <h1 class="header center white-text text-lighten-2">{{ .Site.Params.site_author }}</h1>
     <h3 class="header center white-text text-lighten-2">{{ .Site.Params.site_description}}</h3>
+    {{ else }}
+    <h1 class="header center white-text text-lighten-2">{{ .Title }}</h1>
+    {{ end }}
+    {{ if isset .Params "image" }}
+    <div class="parallax"><img src="{{ .Params.image }}"></div>
+    {{ else }}
     <div class="parallax"><img src="/images/parallax.png"></div>
+    {{ end }}
   </div>

@@ -1,0 +1,20 @@
+<meta name="description" content="I’m a nine year Air Force veteran and web software engineer with a passion for what makes the Internet tick. I code, I travel, I eat and I'm hungry for more!" />
+<meta property="og:url"                content="{{ .Permalink }}" />
+{{ if not .IsPage }}
+<meta property="og:type"               content="website" />
+{{ else }}
+<meta property="og:type"               content="article" />
+{{ end }}
+<meta property="og:title"              content="{{ .Title }}" />
+
+{{ if .Summary }}
+<meta property="og:description"        content="{{ .Summary }}" />
+{{ else }}
+<meta property="og:description"        content="I’m a nine year Air Force veteran and web software engineer with a passion for what makes the Internet tick. I code, I travel, I eat and I'm hungry for more!">
+{{ end }}
+
+{{ if isset .Params "image" }}
+<meta property="og:image"              content="{{ .Params.image }}" />
+{{ else }}
+<meta property="og:image"              content="/images/parallax.png" />
+{{ end }}
