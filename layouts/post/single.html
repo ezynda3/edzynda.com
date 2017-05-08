@@ -2,9 +2,13 @@
 <div class="section white container">
     <div class="row">
         <div class="col s12 m9">
+            {{ partial "single-article-header" . }}
             <div class="flow-text">
                 {{ .Content}}
             </div>
+            {{ partial "article-share" . }}
+            <h3>{{ .Site.Data.l10n.comments.comments }}</h3>
+            {{ template "_internal/disqus.html" . }}
         </div>
         {{ partial "sidebar" . }}
     </div>
